@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://peg.tscn" type="PackedScene" id=1]
+[ext_resource path="res://choice.tscn" type="PackedScene" id=2]
+[ext_resource path="res://main.gd" type="Script" id=3]
+[ext_resource path="res://res/29.tres" type="Texture" id=4]
+[ext_resource path="res://res/21.tres" type="Texture" id=5]
+[ext_resource path="res://checkbutton.tscn" type="PackedScene" id=6]
+
+[node name="board" type="Node2D"]
+script = ExtResource( 3 )
+selected_texture = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+mouse_filter = 2
+texture = ExtResource( 5 )
+expand = true
+
+[node name="peg1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 320, 64 )
+
+[node name="peg2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 384, 64 )
+
+[node name="peg3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 448, 64 )
+
+[node name="peg4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 512, 64 )
+
+[node name="choice" parent="." instance=ExtResource( 2 )]
+position = Vector2( 64, 64 )
+color_number = 8
+
+[node name="choice2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 64, 128 )
+color_number = 14
+
+[node name="choice3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 64, 192 )
+color_number = 16
+
+[node name="choice4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 128, 64 )
+color_number = 18
+
+[node name="choice5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 128, 128 )
+color_number = 22
+
+[node name="choice6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 128, 192 )
+color_number = 26
+
+[node name="choice7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, 64 )
+color_number = 28
+
+[node name="choice8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, 128 )
+color_number = 29
+
+[node name="choice9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, 192 )
+color_number = 31
+
+[node name="checkbutton" parent="." instance=ExtResource( 6 )]
+margin_left = 576.0
+margin_top = 56.0
+margin_right = 640.0
+margin_bottom = 76.0
+
+[connection signal="pressed" from="checkbutton" to="." method="_on_checkbutton_pressed"]

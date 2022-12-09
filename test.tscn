@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://indicator.tscn" type="PackedScene" id=1]
+[ext_resource path="res://choice.tscn" type="PackedScene" id=2]
+[ext_resource path="res://test.gd" type="Script" id=3]
+[ext_resource path="res://res/21.tres" type="Texture" id=5]
+
+[node name="dynamic_board" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+mouse_filter = 2
+texture = ExtResource( 5 )
+expand = true
+
+[node name="choice" parent="." instance=ExtResource( 2 )]
+position = Vector2( 64, 64 )
+color_number = 8
+
+[node name="choice2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 64, 128 )
+color_number = 14
+
+[node name="choice3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 64, 192 )
+color_number = 16
+
+[node name="choice4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 128, 64 )
+color_number = 18
+
+[node name="choice5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 128, 128 )
+color_number = 22
+
+[node name="choice6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 128, 192 )
+color_number = 26
+
+[node name="choice7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, 64 )
+color_number = 28
+
+[node name="choice8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, 128 )
+color_number = 29
+
+[node name="choice9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, 192 )
+color_number = 31
+
+[node name="indicator_row" parent="." instance=ExtResource( 1 )]
+position = Vector2( 600, 64 )
